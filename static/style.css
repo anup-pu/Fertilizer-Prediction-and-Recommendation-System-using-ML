@@ -1,0 +1,176 @@
+/* 🔹 Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: auto;
+    position: relative;
+}
+
+/* 🔹 Container Styling */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+/* 🔹 Header Styling */
+header h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* 🔹 Button Styling */
+.fetch-button, .submit-button {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.fetch-button {
+    background-color: #007bff;
+}
+
+.submit-button {
+    background-color: #28a745;
+    width: 100%;
+}
+
+.fetch-button:hover {
+    background-color: #0056b3;
+}
+
+.submit-button:hover {
+    background-color: #218838;
+}
+
+/* 🔹 Form Group Styling */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 100%;
+}
+
+.overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* 🔹 Fixed Popup Position & Scrolling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 1001;
+    opacity: 0; /* Start with hidden popup */
+    transition: opacity 0.3s ease-in-out; /* Transition for fade-in effect */
+}
+
+/* 🔹 Show the popup */
+.popup.show {
+    display: block;
+    opacity: 1; /* Fade in effect */
+    
+}
+
+/* 🔹 Prevent Popup from Being Cut Off */
+@media (max-width: 768px) {
+    .popup {
+        width: 90%;
+        max-height: 85vh;
+    }
+}
+
+/* 🔹 Popup Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #007bff;
+}
+body.popup-active {
+    overflow: hidden;
+}
+
+/* 🔹 Close Button */
+.close-btn {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    color: #007bff;
+}
+
+/* 🔹 Prevent Scroll Issues on Zoom */
+html, body {
+    overflow-x: hidden;
+}
+
+/* 🔹 Popup Content Section Styling */
+.popup-section {
+    margin-bottom: 20px;
+}
+
+.popup-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #007bff; /* Professional blue color for headings */
+}
+
+.popup-section p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* 🔹 Additional Styling for the Popup */
+.popup h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; /* Darker color for the title */
+}
